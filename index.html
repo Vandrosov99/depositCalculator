@@ -12,18 +12,41 @@
     <div class="container">
         <div class="form">
             <div class="form__heading">Loan Calculator</div>
-            <div class="form__input">
-                <span>$</span>
-                <input type="text">
+            <div class="form__body">
+                <div class="form__input">
+                    <span>$</span>
+                    <input type="number" placeholder="Loan Amount">
+                </div>
+                <div class="form__input">
+                    <span>%</span>
+                    <input type="number" placeholder="Interest">
+                </div>
+                <div class="form__input">
+                    <input type="number" placeholder="Year to Repay">
+                </div>
+                <div class="form__input">
+                    <div class="form__submit">Calculate</div>
+                </div>
             </div>
-            <div class="form__input">
-                <span>%</span>
-                <input type="text">
+
+            <div class="form__footer">
+                <div class="form__heading">Results</div>
+                <div class="form__input">
+                    <span>Monthly Payment
+                    </span>
+                    <input type="number" disabled>
+                </div>
+                <div class="form__input">
+                    <span>Total Payment
+                    </span>
+                    <input type="number" disabled>
+                </div>
+                <div class="form__input">
+                    <span>Total Interest
+                    </span>
+                    <input type="number" disabled>
+                </div>
             </div>
-            <div class="form__input">
-                <input type="text">
-            </div>
-            <div class="form__submit">Calculate</div>
         </div>
     </div>
 </body>

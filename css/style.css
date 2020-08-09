@@ -18,4 +18,72 @@ body {
   padding: 30px 150px; }
 
 .form {
-  background: #fff; }
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px 30px 40px 30px; }
+  .form .form__heading {
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 40px; }
+  .form .form__body .form__input {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0px;
+    color: #495057; }
+    .form .form__body .form__input span {
+      flex: 1;
+      text-align: center;
+      background-color: #e9ecef;
+      border: 1px solid #ced4da;
+      border-right: none;
+      line-height: 45px; }
+  .form .form__body .form__input:last-child {
+    padding: 0; }
+  .form .form__body input {
+    padding: 15px;
+    flex: 10;
+    border: 1px solid #ced4da;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #495057; }
+    .form .form__body input:focus {
+      outline-color: #a5c2bf; }
+  .form .form__body .form__submit {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background: #343a40;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 19px;
+    transition: all 0.2s; }
+    .form .form__body .form__submit:hover {
+      cursor: pointer;
+      background: #2b3035; }
+  .form .form__footer .form__heading {
+    margin-top: 10px; }
+  .form .form__footer .form__input {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px;
+    color: #495057;
+    background-color: #e9ecef; }
+    .form .form__footer .form__input span {
+      flex: 1;
+      padding: 0 15px;
+      text-align: center;
+      border: 1px solid #ced4da;
+      border-right: none;
+      line-height: 45px; }
+  .form .form__footer .form__input:last-child {
+    margin-bottom: 0; }
+  .form .form__footer input {
+    padding: 15px;
+    flex: 1;
+    border: 1px solid #ced4da;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #495057; }
+    .form .form__footer input:focus {
+      outline-color: #a5c2bf; }

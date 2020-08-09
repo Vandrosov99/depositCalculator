@@ -1,0 +1,4 @@
+@mixin fontz ($f, $c) {
+    font-size: $f;
+    color: $c;
+}

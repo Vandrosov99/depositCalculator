@@ -165,3 +165,41 @@ body {
 .form__footer {
     display: none;
 }
+
+// mobile
+
+// @media(min-width:1024px) and (max-width:1366px) {
+//     .container {
+//         padding: 0px;
+//     }
+// }
+
+@media(max-width:800px) {
+    .container {
+        padding: 30px 80px;
+    }
+}
+
+@media(max-width:450px) {
+    .container {
+        padding: 10px 20px;
+    }
+}
+
+@media(max-width:320px) {
+    .container {
+        padding: 10px 20px;
+    }
+
+    .form__body {
+        font-size: 0.8rem;
+    }
+
+    .form {
+        padding: 15px 20px 30px 20px;
+    }
+
+    .form__input input {
+        width: 50%;
+    }
+}

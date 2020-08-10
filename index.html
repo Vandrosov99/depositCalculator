@@ -6,45 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank calc</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="icons/fav.png" />
+
 </head>
 
 <body>
     <div class="container">
         <div class="form">
-            <div class="form__heading">Loan Calculator</div>
+            <div class="form__heading">Deposit Calculator</div>
             <div class="form__body">
                 <div class="form__input">
                     <span>$</span>
-                    <input type="number" placeholder="Loan Amount">
+                    <input id="amount" type="number" placeholder="Deposit Amount">
                 </div>
                 <div class="form__input">
                     <span>%</span>
-                    <input type="number" placeholder="Interest">
+                    <input id="interest" type="number" placeholder="Interest">
                 </div>
                 <div class="form__input">
-                    <input type="number" placeholder="Year to Repay">
+                    <span>Months</span>
+                    <input id="monthsInput" type="number" placeholder="Months">
                 </div>
                 <div class="form__input">
-                    <div class="form__submit">Calculate</div>
+                    <span>Years</span>
+                    <input id="yearsInput" type="number" placeholder="Years" max="12">
+                </div>
+                <div class="form__input">
+                    <div id="submit" class="form__submit">Calculate</div>
                 </div>
             </div>
 
             <div class="form__footer">
                 <div class="form__heading">Results</div>
                 <div class="form__input">
-                    <span>Monthly Payment
+                    <span>Day
                     </span>
-                    <input type="number" disabled>
+                    <input id="dayOutput" type="number" disabled>
                 </div>
                 <div class="form__input">
-                    <span>Total Payment
+                    <span>Month
                     </span>
-                    <input type="number" disabled>
+                    <input id="monthOutput" type="number" disabled>
                 </div>
                 <div class="form__input">
-                    <span>Total Interest
+                    <span>Year
                     </span>
-                    <input type="number" disabled>
+                    <input id="yearOutput" type="number" disabled>
+                </div>
+                <div class="form__input">
+                    <span>Total
+                    </span>
+                    <input id="total" type="number" disabled>
                 </div>
             </div>
         </div>

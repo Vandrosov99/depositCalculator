@@ -19,7 +19,7 @@ body {
 
 .container {
     margin: auto;
-    max-width: 800px;
+    width: 800px;
     padding: 30px 150px;
 
 }
@@ -29,6 +29,15 @@ body {
     border-radius: 10px;
     padding: 15px 30px 40px 30px;
 
+    .error {
+        border-radius: 5px;
+        background: rgb(173, 49, 49);
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        padding: 10px 25px;
+        font-size: 20px;
+    }
 
     .form__heading {
         text-align: center;
@@ -48,12 +57,13 @@ body {
 
 
             & span {
-                flex: 1;
+                flex: 3;
                 text-align: center;
                 background-color: #e9ecef;
                 border: 1px solid #ced4da;
                 border-right: none;
                 line-height: 45px;
+                padding: 0 10px;
             }
 
         }
@@ -128,7 +138,7 @@ body {
 
         & input {
             padding: 15px;
-            flex: 1;
+            flex: 3;
             border: 1px solid #ced4da;
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;

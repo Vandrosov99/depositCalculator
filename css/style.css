@@ -14,13 +14,21 @@ body {
 
 .container {
   margin: auto;
-  max-width: 800px;
+  width: 800px;
   padding: 30px 150px; }
 
 .form {
   background: #fff;
   border-radius: 10px;
   padding: 15px 30px 40px 30px; }
+  .form .error {
+    border-radius: 5px;
+    background: #ad3131;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 20px; }
   .form .form__heading {
     text-align: center;
     font-weight: 500;
@@ -32,12 +40,13 @@ body {
     padding: 15px 0px;
     color: #495057; }
     .form .form__body .form__input span {
-      flex: 1;
+      flex: 3;
       text-align: center;
       background-color: #e9ecef;
       border: 1px solid #ced4da;
       border-right: none;
-      line-height: 45px; }
+      line-height: 45px;
+      padding: 0 10px; }
   .form .form__body .form__input:last-child {
     padding: 0; }
   .form .form__body input {
@@ -80,7 +89,7 @@ body {
     margin-bottom: 0; }
   .form .form__footer input {
     padding: 15px;
-    flex: 1;
+    flex: 3;
     border: 1px solid #ced4da;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;

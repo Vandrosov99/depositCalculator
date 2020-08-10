@@ -30,7 +30,14 @@ calcBtn.addEventListener('click', function () {
 
 
 function calculateValues() {
-
+    if (amount.value < 0 ||
+        interest.value < 0 ||
+        monthsInput.value < 0 ||
+        yearsInput.value < 0) {
+        showError('Please check your numbers');
+        clearValues();
+        return;
+    }
     const alldays = todayYear % 4 === 0 ? 366 : 365;
 
     const forOneDay = (parseFloat(amount.value) / 100 * parseFloat(interest.value)) / alldays;
@@ -56,7 +63,7 @@ function calculateValues() {
     } else {
         showError('Please check your numbers');
     }
-
+    clearValues();
 }
 
 function showError(error) {
@@ -74,4 +81,11 @@ function showError(error) {
 function clearError() {
     document.querySelector('.error').remove();
 
+}
+
+function clearValues() {
+    amount.value = "";
+    interest.value = "";
+    monthsInput.value = "";
+    yearsInput.value = "";
 }

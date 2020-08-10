@@ -17,10 +17,16 @@ const todayMonth = new Date().getMonth();
 const daysInMonth = new Date(todayYear, todayMonth, 0).getDate();
 const newDays = 0;
 const differDays = daysInMonth - todayDay;
-
-
+const loading = document.querySelector('.loading');
+const result = document.querySelector('.form__footer');
 // EVENTS
-calcBtn.addEventListener('click', calculateValues); //calc values
+calcBtn.addEventListener('click', function () {
+
+    result.style.display = 'none';
+    loading.style.display = 'flex';
+
+    setTimeout(calculateValues, 2000)
+}); //calc values
 
 
 function calculateValues() {
@@ -44,6 +50,9 @@ function calculateValues() {
         monthOutput.value = forOneMonth.toFixed(2);
         yearOutput.value = forOneYear.toFixed(2);
         total.value = totalBase.toFixed(2);
+
+        loading.style.display = 'none';
+        result.style.display = 'block';
     } else {
         showError('Please check your numbers');
     }
@@ -51,15 +60,18 @@ function calculateValues() {
 }
 
 function showError(error) {
+    loading.style.display = 'none';
+    result.style.display = 'none';
     const div = document.createElement('div');
     div.className = 'error';
     div.innerText = error;
     // insertBefor
     form.insertBefore(div, headingForm);
     // clear error
-    setTimeout(clearError, 1500);
+    setTimeout(clearError, 2000);
 }
 
 function clearError() {
     document.querySelector('.error').remove();
+
 }

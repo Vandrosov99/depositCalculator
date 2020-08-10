@@ -70,6 +70,9 @@ body {
     .form .form__body .form__submit:hover {
       cursor: pointer;
       background: #2b3035; }
+  .form .loading {
+    display: flex;
+    justify-content: center; }
   .form .form__footer .form__heading {
     margin-top: 10px; }
   .form .form__footer .form__input {
@@ -96,3 +99,7 @@ body {
     color: #495057; }
     .form .form__footer input:focus {
       outline-color: #a5c2bf; }
+
+.form .loading,
+.form__footer {
+  display: none; }

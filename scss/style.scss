@@ -102,6 +102,13 @@ body {
                 background: #2b3035;
             }
         }
+
+
+    }
+
+    .loading {
+        display: flex;
+        justify-content: center;
     }
 
     .form__footer {
@@ -152,4 +159,9 @@ body {
         }
 
     }
+}
+
+.form .loading,
+.form__footer {
+    display: none;
 }

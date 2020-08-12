@@ -104,6 +104,31 @@ body {
 .form__footer {
   display: none; }
 
+.contact {
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  top: 30px;
+  right: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px; }
+  .contact .contact__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .contact .contact__links .contact__item {
+      margin: 5px 8px; }
+      .contact .contact__links .contact__item img {
+        width: 30px;
+        height: 30px; }
+
+@media (max-width: 998px) {
+  .contact {
+    display: none; } }
+
 @media (max-width: 800px) {
   .container {
     padding: 30px 80px; } }

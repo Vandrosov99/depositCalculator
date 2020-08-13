@@ -20,6 +20,12 @@ const differDays = daysInMonth - todayDay;
 const loading = document.querySelector('.loading');
 const result = document.querySelector('.form__footer');
 // EVENTS
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     getInfoFromLocal();
+// });
 calcBtn.addEventListener('click', function () {
 
     result.style.display = 'none';
@@ -38,8 +44,16 @@ function calculateValues() {
         clearValues();
         return;
     }
-    const alldays = todayYear % 4 === 0 ? 366 : 365;
 
+    let tempObj = {
+        amount: amount.value,
+        interest: interest.value,
+        monthsInput: monthsInput.value,
+        yearsInput: yearsInput.value
+    }
+    StoreToLocalStorage(tempObj);
+    getInfoFromLocal();
+    const alldays = todayYear % 4 === 0 ? 366 : 365;
     const forOneDay = (parseFloat(amount.value) / 100 * parseFloat(interest.value)) / alldays;
 
 
@@ -88,4 +102,35 @@ function clearValues() {
     interest.value = "";
     monthsInput.value = "";
     yearsInput.value = "";
+}
+
+function StoreToLocalStorage(inputs) {
+    localStorage.setItem('inputs', JSON.stringify(inputs));
+}
+
+function getInfoFromLocal() {
+
+    let prev = document.querySelector('.info');
+    if (prev !== null) {
+        prev.remove();
+    }
+    // prev.remove();
+    let div = document.createElement('div');
+    div.className = "info";
+    inputs = JSON.parse(localStorage.getItem('inputs'));
+    div.innerHTML =
+        `
+    <h1> Last Input </h1>
+    <div class="info__wrap">
+        <div class="info__item">Money: ${inputs.amount}</div>
+        <div class="info__item">Interest: ${inputs.interest}</div>
+        <div class="info__item">Months: ${inputs.monthsInput}</div>
+        <div class="info__item">Years: ${inputs.yearsInput}</div>
+    </div>
+    `
+    insertAfter(form, div);
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
